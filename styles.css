@@ -9,6 +9,7 @@
   --pros-padding: 62px;
   --quotes-arrows-pad: 300px;
   --popular-arrows-x: -6vw;
+  --smile-p-margin: 20px;
 }
 
 /* General Styles  */
@@ -19,6 +20,14 @@
 
 .main-color {
   color: var(--main-color);
+}
+
+.section-header h2 {
+  font-weight: 300;
+}
+
+.section-header span {
+  font-weight: bold;
 }
 
 /* Header / Hero Styles */
@@ -227,7 +236,7 @@
   background-color: var(--color-white);
 }
 
-.popular h2 {
+.popular .section-header {
   padding-top: 87px;
   padding-bottom: 75px;
 }
@@ -326,5 +335,78 @@
   .section .card-img-overlay {
     /* top: 25px; */
     top: 5%;
+  }
+}
+
+/* SMILES Section  */
+
+.smiles {
+  height: auto;
+  background: var(--background-color);
+}
+
+.smiles .section-header {
+  padding-top: 70px;
+  padding-bottom: 58px;
+}
+
+.smiles .row h3 {
+  font-size: 18px;
+  margin-bottom: 13px;
+  margin-top: 26px;
+}
+
+.smiles .row p {
+  font-size: 14px;
+  line-height: 26px;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-left: var(--smile-p-margin);
+  margin-right: var(--smile-p-margin);
+}
+.smiles .row {
+  padding-bottom: 85px;
+}
+
+.register-btn {
+  padding-bottom: 52px;
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --smile-p-margin: 5vw;
+    --smile-padding: 60px;
+  }
+  .smile1,
+  .smile2 {
+    padding-bottom: 58px;
+  }
+  .row .smile1,
+  .row .smile2,
+  .row .smile3,
+  .row .smile4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row .smile1,
+  .row .smile3 {
+    padding-left: var(--smile-padding);
+  }
+  .row .smile2,
+  .row .smile4 {
+    padding-right: var(--smile-padding);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --smile-p-margin: 20vw;
+    --smile-padding: 0;
+  }
+  .smile1,
+  .smile2,
+  .smile3 {
+    padding-bottom: 50px;
   }
 }
