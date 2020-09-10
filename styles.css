@@ -66,6 +66,25 @@
   font-size: 12px;
 }
 
+.header .nav-link:hover {
+  color: var(--main-color) !important;
+}
+
+.header .nav-link:after {
+  content: "";
+  display: block;
+  background-color: var(--color-white);
+  width: 0;
+  height: 2px;
+  top: 4px;
+  position: relative;
+  transition: 180ms;
+}
+
+.header .nav-link:hover:after {
+  width: 100%;
+}
+
 .hero {
   margin-top: 155px;
 }
@@ -130,6 +149,9 @@
 @media screen and (max-width: 576px) {
   .hero h1 {
     font-size: 61px;
+  }
+  .header .nav-link:hover:after {
+    width: 0%;
   }
 }
 
@@ -475,5 +497,48 @@
   }
   .footer .social {
     padding: 45px 0;
+  }
+}
+
+/* 
+===================================================================
+===================================================================
+PRICING 
+===================================================================
+=================================================================== */
+
+/* HEADER SECTION */
+
+.pricing-header {
+  background-image: url(images/pic_2.jpg);
+}
+
+.pricing-header h1 {
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+.pricing-header h2 {
+  padding-top: 75px;
+  padding-bottom: 55px;
+  font-size: 60px;
+}
+
+.pricing-header .hero .smile-fig {
+  max-width: 37px;
+}
+.pricing-header .title-fig {
+  width: 200px;
+}
+
+@media screen and (max-width: 575px) {
+  .pricing-header h1 {
+    font-size: 24px;
+  }
+  .pricing-header .hero .smile-fig {
+    max-width: 30px;
+  }
+  .pricing-header .title-fig {
+    width: 150px;
   }
 }
