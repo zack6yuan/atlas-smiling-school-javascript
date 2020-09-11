@@ -11,6 +11,9 @@
   --popular-arrows-x: -6vw;
   --smile-p-margin: 20px;
   --check-color: #82d24f;
+
+  --faq-pad-inner: 8vw;
+  --faq-pad-outer: 7vw;
 }
 
 /* General Styles  */
@@ -262,6 +265,7 @@
 .popular .section-header {
   padding-top: 87px;
   padding-bottom: 75px;
+  color: var(--background-color);
 }
 
 .section .card {
@@ -280,6 +284,7 @@
 .section .card-title {
   font-size: 16px;
   line-height: 20px;
+  color: var(--background-color);
 }
 
 .section .card-text {
@@ -618,5 +623,71 @@ PRICING
   }
   .prices-grid .pricing-table-title-1 {
     padding-right: 36px;
+  }
+}
+
+/* FAQ SECTION  */
+
+.faq .section-header h2 {
+  margin-top: 74px;
+  font-size: 60px;
+  font-weight: 300;
+  color: var(--background-color);
+}
+
+.faq .question h3 {
+  font-size: 1rem;
+  line-height: 20px;
+  margin-bottom: 30px;
+  color: var(--background-color);
+}
+
+.faq .question p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.faq .section-body {
+  margin-top: 74px;
+  margin-bottom: 127px;
+}
+
+.faq .section-body .row1 {
+  padding-bottom: 74px;
+}
+
+.faq .section-body .col1 {
+  padding-right: var(--faq-pad-inner);
+  padding-left: var(--faq-pad-outer);
+}
+
+.faq .section-body .col2 {
+  padding-left: var(--faq-pad-inner);
+  padding-right: var(--faq-pad-outer);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --faq-pad-inner: 3vw;
+    --faq-pad-outer: 9vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .faq .section-body .col1,
+  .faq .section-body .col2 {
+    padding: 0 4vw;
+  }
+
+  .faq .section-body .row1 {
+    padding-bottom: 146px;
+  }
+
+  .faq .section-body .col2 {
+    padding-top: 146px;
+  }
+
+  .faq .section-body {
+    margin-bottom: 108px;
   }
 }
