@@ -572,7 +572,7 @@ PRICING
 }
 
 .prices-grid .check-icon {
-  font-size: 1rem;
+  font-size: 28px;
   color: var(--check-color);
 }
 
@@ -582,4 +582,41 @@ PRICING
 
 .prices-grid .row {
   margin-bottom: 62px;
+}
+
+.prices-grid .table .prices-col-1,
+.prices-grid .table .prices-col-2,
+.prices-grid .table .prices-col-3 {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 576px) {
+  .prices-grid .table .prices-col-3 {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .prices-grid .row {
+    margin-bottom: 51px;
+  }
+
+  .prices-grid .table {
+    table-layout: initial;
+  }
+  .prices-grid .pricing-table-title-1,
+  .prices-grid .pricing-table-title-2 {
+    font-size: 12px;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .prices-grid .prices-col-1 {
+    padding-right: 30px;
+  }
+  .prices-grid .prices-col-2 {
+    padding-right: 50px;
+  }
+  .prices-grid .pricing-table-title-1 {
+    padding-right: 36px;
+  }
 }
