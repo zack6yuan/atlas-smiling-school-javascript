@@ -10,6 +10,7 @@
   --quotes-arrows-pad: 300px;
   --popular-arrows-x: -6vw;
   --smile-p-margin: 20px;
+  --check-color: #82d24f;
 }
 
 /* General Styles  */
@@ -451,10 +452,6 @@
   padding: 0;
 }
 
-.footer .trademark {
-  color: gray;
-}
-
 .footer .social-item {
   font-size: 30px;
 }
@@ -541,4 +538,48 @@ PRICING
   .pricing-header .title-fig {
     width: 150px;
   }
+}
+
+/* PRICING GRID  */
+
+.prices-grid {
+  padding-bottom: 38px;
+}
+
+.prices-grid .plan button {
+  font-size: 14px;
+  font-weight: 600;
+  width: 162px;
+  height: 44px;
+}
+
+.prices-grid .plan h3 {
+  font-size: 44px;
+  line-height: 50px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.prices-grid .plan span {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.prices-grid .table {
+  table-layout: fixed;
+  margin-bottom: 0;
+}
+
+.prices-grid .check-icon {
+  font-size: 1rem;
+  color: var(--check-color);
+}
+
+.prices-grid .signal-logo {
+  padding: 10px 0 5px 0;
+}
+
+.prices-grid .row {
+  margin-bottom: 62px;
 }
