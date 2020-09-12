@@ -12,19 +12,19 @@ The designs were planned for Desktop, Tablet, and Mobile.
 
 # Homepage
 
-| **Desktop (Width: 1440 px)**                              | **Tablet (Width: 760 px)**                              | **Mobile (Width: 576 px)**                              |
+| **Desktop (Width: 1440 px)**                              | **Tablet (Width: 768 px)**                              | **Mobile (Width: 576 px)**                              |
 | --------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
 | ![Desktop](https://i.ibb.co/pKGgC0J/Homepage-Desktop.png) | ![Tablet](https://i.ibb.co/6XBLwf9/Homepage-Tablet.png) | ![Mobile](https://i.ibb.co/NVBK21F/Homepage-Mobile.png) |
 
 # Pricing
 
-| **Desktop (Width: 1440 px)**                             | **Tablet (Width: 760 px)**                             | **Mobile (Width: 576 px)**                             |
+| **Desktop (Width: 1440 px)**                             | **Tablet (Width: 768 px)**                             | **Mobile (Width: 576 px)**                             |
 | -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | ![Desktop](https://i.ibb.co/RvSJ2YS/Pricing-Desktop.png) | ![Tablet](https://i.ibb.co/Gkvsf0Y/Pricing-Tablet.png) | ![Mobile](https://i.ibb.co/6RwmYck/Pricing-Mobile.png) |
 
 # Courses
 
-| **Desktop (Width: 1440 px)**                             | **Tablet (Width: 760 px)**                             | **Mobile (Width: 576 px)**                             |
+| **Desktop (Width: 1440 px)**                             | **Tablet (Width: 768 px)**                             | **Mobile (Width: 576 px)**                             |
 | -------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | ![Desktop](https://i.ibb.co/y51S3HX/Courses-Desktop.png) | ![Tablet](https://i.ibb.co/28qK1g0/Courses-Tablet.png) | ![Mobile](https://i.ibb.co/f8zNgkx/Courses-Mobile.png) |
 
