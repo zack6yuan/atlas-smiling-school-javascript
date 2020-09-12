@@ -6,7 +6,7 @@ These group of web pages were coded from scratch with the help of the Boostrap F
 
 [Figma Pricing](https://www.figma.com/file/KLAI53jdYpfFNEy0O79ymB/Pricing)
 
-[Figma Courses](figma.com/file/ivg3abH1HLmMayBgjGg1Qf/Courses)
+[Figma Courses](https://www.figma.com/file/ivg3abH1HLmMayBgjGg1Qf/Courses)
 
 The designs were planned for Desktop, Tablet, and Mobile.
 
