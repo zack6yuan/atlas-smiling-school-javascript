@@ -76,9 +76,9 @@
   font-size: 12px;
 }
 
-.header .nav-link:hover {
+/* .header .nav-link:hover {
   color: var(--main-color) !important;
-}
+} */
 
 .header .nav-link:after {
   content: "";
@@ -91,7 +91,23 @@
   transition: 180ms;
 }
 
-.header .nav-link:hover:after {
+/* .header .nav-link:hover:after {
+  width: 100%;
+} */
+
+.pricing-header .navbar-nav li:nth-child(2) a {
+  color: var(--main-color) !important;
+}
+
+.pricing-header .navbar-nav li:nth-child(2) a:after {
+  width: 100%;
+}
+
+.courses-header .navbar-nav li:nth-child(1) a {
+  color: var(--main-color) !important;
+}
+
+.courses-header .navbar-nav li:nth-child(1) a:after {
   width: 100%;
 }
 
@@ -156,11 +172,16 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   .hero h1 {
     font-size: 61px;
   }
-  .header .nav-link:hover:after {
+
+  .pricing-header .navbar-nav li:nth-child(2) a:after {
+    width: 0%;
+  }
+
+  .courses-header .navbar-nav li:nth-child(1) a:after {
     width: 0%;
   }
 }
@@ -836,5 +857,46 @@
   .search .box2 {
     margin-top: 19px;
     margin-bottom: 19px;
+  }
+}
+
+/* RESULTS SECTION  */
+.results .section-title {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 29px;
+}
+
+.results .container {
+  margin-top: 47px;
+  margin-bottom: 37px;
+}
+
+.row [class*="col-"] {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .results .card-img-overlay {
+    top: 1vh;
+  }
+  .results .rating img {
+    width: 12px;
+  }
+
+  .results .rating + span {
+    display: block;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .results .card-img-overlay {
+    top: 5vh;
+  }
+
+  .results .card {
+    width: 90vw;
   }
 }
