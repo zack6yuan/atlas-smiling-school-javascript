@@ -35,6 +35,11 @@
   font-weight: bold;
 }
 
+.btn:hover,
+.btn:active {
+  opacity: var(--opacity-value);
+}
+
 /* Header / Hero Styles */
 
 .header {
