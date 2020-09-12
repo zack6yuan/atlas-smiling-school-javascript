@@ -1,6 +1,6 @@
 # Holberton Smiling School (Bootstrap Project)
 
-This web page was coded from scratch with the Boostrap Framework based on some design models given on Figma
+These group of web pages were coded from scratch with the help of the Boostrap Framework and based on some design models given on Figma.
 
 [Figma Homepage](https://www.figma.com/file/QYQqMYbdpAHL5xTclwJKSI/Homepage)
 
@@ -8,7 +8,7 @@ This web page was coded from scratch with the Boostrap Framework based on some d
 
 [Figma Courses](figma.com/file/ivg3abH1HLmMayBgjGg1Qf/Courses)
 
-The designs were planned for Desktop, Tablet, and Mobile, so the web page was implemented with responsiveness to different device sizes.
+The designs were planned for Desktop, Tablet, and Mobile.
 
 # Homepage
 
