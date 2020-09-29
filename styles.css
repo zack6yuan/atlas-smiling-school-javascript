@@ -76,9 +76,9 @@
   font-size: 12px;
 }
 
-/* .header .nav-link:hover {
+.header .nav-link:hover {
   color: var(--main-color) !important;
-} */
+}
 
 .header .nav-link:after {
   content: "";
@@ -768,7 +768,7 @@
 }
 
 .search .input-group-prepend {
-  margin-right: 0;
+  margin-right: 0px;
 }
 
 .search .input-group-text {
