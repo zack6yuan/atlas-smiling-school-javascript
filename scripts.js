@@ -150,7 +150,7 @@ function setCreatorFour() {
 }
 setCreatorFour();
 
-function setTImeOne() {
+function setTimeOne() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -158,9 +158,9 @@ function setTImeOne() {
     timeFetch.textContent = data[0].duration
   })
 }
-setTImeOne();
+setTimeOne();
 
-function setTImeTwo() {
+function setTimeTwo() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -168,9 +168,9 @@ function setTImeTwo() {
     timeFetch.textContent = data[1].duration
   })
 }
-setTImeTwo();
+setTimeTwo();
 
-function setTImeThree() {
+function setTimeThree() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -178,9 +178,9 @@ function setTImeThree() {
     timeFetch.textContent = data[2].duration
   })
 }
-setTImeThree();
+setTimeThree();
 
-function setTImeFour() {
+function setTimeFour() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -188,7 +188,7 @@ function setTImeFour() {
     timeFetch.textContent = data[3].duration
   })
 }
-setTImeFour();
+setTimeFour();
 
 function setVideoNameFive() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -230,7 +230,7 @@ function setCreatorSix() {
 }
 setCreatorSix();
 
-function setTImeFive() {
+function setTimeFive() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -238,9 +238,9 @@ function setTImeFive() {
     timeFetch.textContent = data[4].duration
   })
 }
-setTImeFive();
+setTimeFive();
 
-function setTImeSix() {
+function setTimeSix() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
@@ -248,4 +248,4 @@ function setTImeSix() {
     timeFetch.textContent = data[5].duration
   })
 }
-setTImeSix();
+setTimeSix();
