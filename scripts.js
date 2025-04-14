@@ -24,6 +24,16 @@ function setTitleOne() {
 }
 setTitleOne();
 
+function setQuoteOne() {
+  fetch("https://smileschool-api.hbtn.info/quotes")
+  .then(response => response.json())
+  .then(data => {
+    const quoteFetch = document.getElementById("quoteOne")
+    quoteFetch.textContent = data[0].text
+  })
+}
+setQuoteOne();
+
 function setNameTwo() {
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then(response => response.json())
@@ -46,3 +56,13 @@ function setTitleTwo() {
   })
 }
 setTitleTwo();
+
+function setQuoteTwo() {
+  fetch("https://smileschool-api.hbtn.info/quotes")
+  .then(response => response.json())
+  .then(data => {
+    const quoteFetch = document.getElementById("quoteTwo")
+    quoteFetch.textContent = data[1].text;
+  })
+}
+setQuoteTwo();
