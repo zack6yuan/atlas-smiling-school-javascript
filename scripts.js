@@ -1,4 +1,4 @@
-function setNameOne() {
+/* function setNameOne() {
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then(response => response.json())
   .then(data => {
@@ -9,20 +9,24 @@ function setNameOne() {
     console.error(error);
   })
 }
-setNameOne();
+setNameOne(); */
 
-function setTitleOne() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
+fetch("https://smileschool-api.hbtn.info/quotes"), {
+  method: "GET",
+}
+.then(response => response.json())
   .then(data => {
-    const titleFetch = document.getElementById("titleOne")
-    titleFetch.textContent = data[0].title;
+    const nameFetch = document.getElementById("nameOne")
+    nameFetch.textContent = data[0].name;
   })
   .catch(error => {
-    console.error(error)
+    console.error(error);
   })
-}
-setTitleOne();
+
+
+
+
+
 
 function setQuoteOne() {
   fetch("https://smileschool-api.hbtn.info/quotes")
@@ -64,5 +68,21 @@ function setQuoteTwo() {
     const quoteFetch = document.getElementById("quoteTwo")
     quoteFetch.textContent = data[1].text;
   })
+  .catch(error => {
+    console.error(error)
+  })
 }
 setQuoteTwo();
+
+function setImageTwo() {
+  fetch("https://smileschool-api.hbtn.info/quotes")
+  .then(response => response.json())
+  .then(data => {
+    const imageFetch = document.getElementById("imageTwo")
+    imageFetch.src = imageFetch.src = data[1].image;
+  })
+  .catch(error => {
+    console.error(error)
+  })
+}
+setImageTwo();
