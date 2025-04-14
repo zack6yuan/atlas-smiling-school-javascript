@@ -1,3 +1,19 @@
+// Quote Section Functions
+
+// First Quote
+function setQuoteOne() {
+  fetch("https://smileschool-api.hbtn.info/quotes")
+  .then(response => response.json())
+  .then(data => {
+    const quoteFetch = document.getElementById("quoteOne")
+    quoteFetch.textContent = data[0].text
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setQuoteOne();
+
 function setNameOne() {
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then(response => response.json())
@@ -11,15 +27,32 @@ function setNameOne() {
 }
 setNameOne();
 
-function setQuoteOne() {
+function setTitleOne() {
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then(response => response.json())
   .then(data => {
-    const quoteFetch = document.getElementById("quoteOne")
-    quoteFetch.textContent = data[0].text
+    const titleFetch = document.getElementById("titleOne")
+    titleFetch.textContent = data[0].title;
+  })
+  .catch(error => {
+    console.error(error)
   })
 }
-setQuoteOne();
+setTitleOne();
+
+// Second Quote
+function setQuoteTwo() {
+  fetch("https://smileschool-api.hbtn.info/quotes")
+  .then(response => response.json())
+  .then(data => {
+    const quoteFetch = document.getElementById("quoteTwo")
+    quoteFetch.textContent = data[1].text;
+  })
+  .catch(error => {
+    console.error(error)
+  })
+}
+setQuoteTwo();
 
 function setNameTwo() {
   fetch("https://smileschool-api.hbtn.info/quotes")
@@ -27,6 +60,9 @@ function setNameTwo() {
   .then(data => {
     const nameFetch = document.getElementById("nameTwo")
     nameFetch.textContent = data[1].name;
+  })
+  .catch(error => {
+    console.error(error);
   })
 }
 setNameTwo();
@@ -44,32 +80,9 @@ function setTitleTwo() {
 }
 setTitleTwo();
 
-function setQuoteTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const quoteFetch = document.getElementById("quoteTwo")
-    quoteFetch.textContent = data[1].text;
-  })
-  .catch(error => {
-    console.error(error)
-  })
-}
-setQuoteTwo();
+// Video Section Functions
 
-function setImageTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const imageFetch = document.getElementById("imageTwo")
-    imageFetch.src = imageFetch.src = data[1].image;
-  })
-  .catch(error => {
-    console.error(error)
-  })
-}
-setImageTwo();
-
+// First Video
 function setVideoNameOne() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
@@ -77,18 +90,11 @@ function setVideoNameOne() {
     const titleFetch = document.getElementById("videoOne")
     titleFetch.textContent = data[0].title;
   })
-}
-setVideoNameOne();
-
-function setVideoNameTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("videoTwo")
-    titleFetch.textContent = data[1].title;
+  .catch(error => {
+    console.error(error);
   })
 }
-setVideoNameTwo();
+setVideoNameOne();
 
 function setCreatorOne() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -97,8 +103,42 @@ function setCreatorOne() {
     const titleFetch = document.getElementById("creatorOne")
     titleFetch.textContent = data[0].author;
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setCreatorOne();
+
+function setStarsOne() {
+ // TODO
+}
+setStarsOne();
+
+function setTimeOne() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeOne")
+    timeFetch.textContent = data[0].duration
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setTimeOne();
+
+function setVideoNameTwo() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("videoTwo")
+    titleFetch.textContent = data[1].title;
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setVideoNameTwo();
 
 function setCreatorTwo() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -107,15 +147,40 @@ function setCreatorTwo() {
     const titleFetch = document.getElementById("creatorTwo")
     titleFetch.textContent = data[1].author;
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setCreatorTwo();
 
+function setStarsTwo() {
+  // TODO
+}
+setStarsTwo();
+
+function setTimeTwo() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeTwo")
+    timeFetch.textContent = data[1].duration
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setTimeTwo();
+
+// Third Video
 function setVideoNameThree() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
     const titleFetch = document.getElementById("videoThree")
     titleFetch.textContent = data[2].title
+  })
+  .catch(error => {
+    console.error(error);
   })
 }
 setVideoNameThree();
@@ -127,15 +192,40 @@ function setCreatorThree() {
     const titleFetch = document.getElementById("creatorThree")
     titleFetch.textContent = data[2].author
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setCreatorThree();
 
+function setStarsThree() {
+  // TODO
+}
+setStarsThree()
+
+function setTimeThree() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeThree")
+    timeFetch.textContent = data[2].duration
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setTimeThree();
+
+// Fourth Video
 function setVideoNameFour() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
   .then(data => {
     const titleFetch = document.getElementById("videoFour")
     titleFetch.textContent = data[3].title
+  })
+  .catch(error => {
+    console.error(error);
   })
 }
 setVideoNameFour();
@@ -147,38 +237,16 @@ function setCreatorFour() {
     const titleFetch = document.getElementById("creatorFour")
     titleFetch.textContent = data[3].author
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setCreatorFour();
 
-function setTimeOne() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeOne")
-    timeFetch.textContent = data[0].duration
-  })
+function setStarsFour() {
+  // TODO
 }
-setTimeOne();
-
-function setTimeTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeTwo")
-    timeFetch.textContent = data[1].duration
-  })
-}
-setTimeTwo();
-
-function setTimeThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeThree")
-    timeFetch.textContent = data[2].duration
-  })
-}
-setTimeThree();
+setStarsFour();
 
 function setTimeFour() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -187,9 +255,13 @@ function setTimeFour() {
     const timeFetch = document.getElementById("timeFour")
     timeFetch.textContent = data[3].duration
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setTimeFour();
 
+// Fifth Video
 function setVideoNameFive() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
@@ -197,18 +269,11 @@ function setVideoNameFive() {
     const titleFetch = document.getElementById("videoFive")
     titleFetch.textContent = data[4].title
   })
-}
-setVideoNameFive();
-
-function setVideoNameSix() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("videoSix")
-    titleFetch.textContent = data[5].title
+  .catch(error => {
+    console.error(error);
   })
 }
-setVideoNameSix();
+setVideoNameFive();
 
 function setCreatorFive() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -217,18 +282,16 @@ function setCreatorFive() {
     const titleFetch = document.getElementById("creatorFive")
     titleFetch.textContent = data[4].author
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setCreatorFive();
 
-function setCreatorSix() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("creatorSix")
-    titleFetch.textContent = data[5].author
-  })
+function setStarsFive() {
+  // TODO
 }
-setCreatorSix();
+setStarsFive();
 
 function setTimeFive() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -237,8 +300,43 @@ function setTimeFive() {
     const timeFetch = document.getElementById("timeFive")
     timeFetch.textContent = data[4].duration
   })
+  .catch(error => {
+    console.error(error);
+  })
 }
 setTimeFive();
+
+// Sixth Video
+function setVideoNameSix() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("videoSix")
+    titleFetch.textContent = data[5].title
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setVideoNameSix();
+
+function setCreatorSix() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("creatorSix")
+    titleFetch.textContent = data[5].author
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+setCreatorSix();
+
+function setStarsSix() {
+  // TODO
+}
+setStarsSix();
 
 function setTimeSix() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
@@ -246,6 +344,9 @@ function setTimeSix() {
   .then(data => {
     const timeFetch = document.getElementById("timeSix")
     timeFetch.textContent = data[5].duration
+  })
+  .catch(error => {
+    console.error(error);
   })
 }
 setTimeSix();
