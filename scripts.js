@@ -115,7 +115,137 @@ function setVideoNameThree() {
   .then(response => response.json())
   .then(data => {
     const titleFetch = document.getElementById("videoThree")
-    titleFetch.textContent = data[0].title
+    titleFetch.textContent = data[2].title
   })
 }
 setVideoNameThree();
+
+function setCreatorThree() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("creatorThree")
+    titleFetch.textContent = data[2].author
+  })
+}
+setCreatorThree();
+
+function setVideoNameFour() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("videoFour")
+    titleFetch.textContent = data[3].title
+  })
+}
+setVideoNameFour();
+
+function setCreatorFour() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("creatorFour")
+    titleFetch.textContent = data[3].author
+  })
+}
+setCreatorFour();
+
+function setTImeOne() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeOne")
+    timeFetch.textContent = data[0].duration
+  })
+}
+setTImeOne();
+
+function setTImeTwo() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeTwo")
+    timeFetch.textContent = data[1].duration
+  })
+}
+setTImeTwo();
+
+function setTImeThree() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeThree")
+    timeFetch.textContent = data[2].duration
+  })
+}
+setTImeThree();
+
+function setTImeFour() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeFour")
+    timeFetch.textContent = data[3].duration
+  })
+}
+setTImeFour();
+
+function setVideoNameFive() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("videoFive")
+    titleFetch.textContent = data[4].title
+  })
+}
+setVideoNameFive();
+
+function setVideoNameSix() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("videoSix")
+    titleFetch.textContent = data[5].title
+  })
+}
+setVideoNameSix();
+
+function setCreatorFive() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("creatorFive")
+    titleFetch.textContent = data[4].author
+  })
+}
+setCreatorFive();
+
+function setCreatorSix() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const titleFetch = document.getElementById("creatorSix")
+    titleFetch.textContent = data[5].author
+  })
+}
+setCreatorSix();
+
+function setTImeFive() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeFive")
+    timeFetch.textContent = data[4].duration
+  })
+}
+setTImeFive();
+
+function setTImeSix() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const timeFetch = document.getElementById("timeSix")
+    timeFetch.textContent = data[5].duration
+  })
+}
+setTImeSix();
