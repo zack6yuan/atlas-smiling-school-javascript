@@ -238,6 +238,19 @@ function setTimeTwo() {
 setTimeTwo();
 
 // Third Video
+function setThumbnailThree() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const thumbnailFetch = document.getElementById("thumbnailThree")
+    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_3.jpg"
+  })
+  .catch(error => {
+    console.error(error)
+  })
+}
+setThumbnailThree();
+
 function setVideoNameThree() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
@@ -296,6 +309,19 @@ function setTimeThree() {
 setTimeThree();
 
 // Fourth Video
+function setThumbnailFour() {
+  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
+  .then(response => response.json())
+  .then(data => {
+    const thumbnailFetch = document.getElementById("thumbnailFour")
+    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_4.jpg"
+  })
+  .catch(error => {
+    console.error(error)
+  })
+}
+setThumbnailFour();
+
 function setVideoNameFour() {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then(response => response.json())
