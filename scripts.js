@@ -546,3 +546,109 @@ $.ajax({
     console.error(error)
   },
 });
+
+// Pricing Page
+// Ajax request for the first quote image
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const ImageFetch = document.getElementById("pricingPicOne");
+    ImageFetch.src = data[0].pic_url;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for the second quote image
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const ImageFetch = document.getElementById("pricingPicTwo");
+    ImageFetch.src = data[1].pic_url;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for quote author name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("pricingNameOne");
+    quoteFetch.textContent = data[0].name;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for quote author name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("pricingNameTwo");
+    quoteFetch.textContent = data[1].name;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for pricing title one
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("pricingTitleOne");
+    quoteFetch.textContent = data[0].title;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for pricing title Two
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("pricingTitleTwo");
+    quoteFetch.textContent = data[1].title;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+  // Ajax request for first quote content
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+      const quoteFetch = document.getElementById("pricingQuoteOne");
+      quoteFetch.textContent = data[0].text;
+    },
+    error: function (error) {
+      console.error(error);
+    },
+  });
+    // Ajax request for first quote content
+    $.ajax({
+      url: "https://smileschool-api.hbtn.info/quotes",
+      method: "GET",
+      dataType: "json",
+      success: function (data) {
+        const quoteFetch = document.getElementById("pricingQuoteTwo");
+        quoteFetch.textContent = data[1].text;
+      },
+      error: function (error) {
+        console.error(error);
+      },
+    });
