@@ -1,457 +1,548 @@
-// Quote Section Functions
-
-// First Quote
-function setImageOne() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const imageFetch = document.getElementById("quotePicOne")
-    imageFetch.src = "https://smileschool-api.s3.amazonaws.com/profile_5.jpg"
+$(document).ready(function () {
+  // First Quote Block
+  // Ajax request for the first quote image
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+      const ImageFetch = document.getElementById("quotePicOne");
+      ImageFetch.src = data[0].pic_url;
+    },
+    error: function (error) {
+      console.error(error);
+    },
+  });
+  // Ajax request for quote content
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+      const quoteFetch = document.getElementById("quoteOne");
+      quoteFetch.textContent = data[0].text;
+    },
+    error: function (error) {
+      console.error(error);
+    },
+  });
+  // Ajax request for quote author name
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+      const quoteFetch = document.getElementById("nameOne");
+      quoteFetch.textContent = data[0].name;
+    },
+    error: function (error) {
+      console.error(error);
+    },
+  });
+  // Ajax request for quote author title
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+      const quoteFetch = document.getElementById("titleOne");
+      quoteFetch.textContent = data[0].title;
+    },
+    error: function (error) {
+      console.error(error);
+    },
+  });
+  // Second quote block
+  // Ajax request for the second quote image
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/quotes",
+    method: "GET",
+    dataType: "json",
+    success: function(data) {
+      const imageFetch = document.getElementById("quotePicTwo")
+      imageFetch.src = data[1].pic_url;
+    },
+    error: function(error) {
+      console.error(error);
+    }
   })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setImageOne();
-
-function setQuoteOne() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const quoteFetch = document.getElementById("quoteOne")
-    quoteFetch.textContent = data[0].text
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setQuoteOne();
-
-function setNameOne() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const nameFetch = document.getElementById("nameOne")
-    nameFetch.textContent = data[0].name;
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setNameOne();
-
-function setTitleOne() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("titleOne")
-    titleFetch.textContent = data[0].title;
-  })
-  .catch(error => {
-    console.error(error)
-  })
-}
-setTitleOne();
-
-// Second Quote
-function setImageTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const imageFetch = document.getElementById("quotePicTwo")
-    imageFetch.src = "https://smileschool-api.s3.amazonaws.com/profile_2.jpg"
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setImageTwo();
-
-function setQuoteTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const quoteFetch = document.getElementById("quoteTwo")
+});
+// Ajax request for quote content
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("quoteTwo");
     quoteFetch.textContent = data[1].text;
-  })
-  .catch(error => {
-    console.error(error)
-  })
-}
-setQuoteTwo();
-
-function setNameTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const nameFetch = document.getElementById("nameTwo")
-    nameFetch.textContent = data[1].name;
-  })
-  .catch(error => {
+  },
+  error: function (error) {
     console.error(error);
-  })
-}
-setNameTwo();
-
-function setTitleTwo() {
-  fetch("https://smileschool-api.hbtn.info/quotes")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("titleTwo")
-    titleFetch.textContent = data[1].title;
-  })
-  .catch(error => {
-    console.error(error)
-  })
-}
-setTitleTwo();
-
+  },
+});
+// Ajax request for quote author name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("nameTwo");
+    quoteFetch.textContent = data[1].name;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
+// Ajax request for quote author title
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/quotes",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const quoteFetch = document.getElementById("titleTwo");
+    quoteFetch.textContent = data[1].title;
+  },
+  error: function (error) {
+    console.error(error);
+  },
+});
 // Video Section Functions
-
-// First Video
-function setThumbnailOne() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+// Ajax request to set first video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const thumbnailFetch = document.getElementById("thumbnailOne")
-    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_1.jpg"
-  })
-  .catch(error => {
+    thumbnailFetch.src = data[0].thumb_url;
+  },
+  error: function(error) {
     console.error(error)
-  })
-}
-setThumbnailOne();
-
-function setVideoNameOne() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+});
+// Ajax request for first video title
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoOne")
-    titleFetch.textContent = data[0].title;
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameOne();
-
-function setCreatorOne() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+    titleFetch.textContent = data[0].title
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for first video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const imageFetch = document.getElementById("creatorPicOne")
+    imageFetch.src = data[0].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for first video creator name (REVISE)
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("creatorOne")
-    titleFetch.textContent = data[0].author;
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorOne();
-
-function setStarsOne() {
- // TODO
-}
-setStarsOne();
-
-function setTimeOne() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeOne")
-    timeFetch.textContent = data[0].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeOne();
-
-// Second Video
-function setThumbnailTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+    titleFetch.textContent = data[0].author
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for first video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeOne")
+    titleFetch.textContent = data[0].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const thumbnailFetch = document.getElementById("thumbnailTwo")
-    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_2.jpg"
-  })
-  .catch(error => {
+    thumbnailFetch.src = data[1].thumb_url;
+  },
+  error: function(error) {
     console.error(error)
-  })
-}
-setThumbnailTwo();
-
-function setVideoNameTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+});
+// Ajax request for second video title
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoTwo")
-    titleFetch.textContent = data[1].title;
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameTwo();
-
-function setPicTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const imageFetch = document.getElementById("creatorPicTwo")
-    imageFetch.src = "https://smileschool-api.s3.amazonaws.com/profile_2.jpg"
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setPicTwo();
-
-function setCreatorTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const titleFetch = document.getElementById("creatorTwo")
-    titleFetch.textContent = data[1].author;
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorTwo();
-
-function setStarsTwo() {
-  // TODO
-}
-setStarsTwo();
-
-function setTimeTwo() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeTwo")
-    timeFetch.textContent = data[1].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeTwo();
-
-// Third Video
-function setThumbnailThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const thumbnailFetch = document.getElementById("thumbnailThree")
-    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_3.jpg"
-  })
-  .catch(error => {
+    titleFetch.textContent = data[1].title
+  },
+  error: function(error) {
     console.error(error)
-  })
-}
-setThumbnailThree();
-
-function setVideoNameThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+});
+// Ajax request for second video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const imageFetch = document.getElementById("creatorPicTwo")
+    imageFetch.src = data[1].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("creatorTwo")
+    titleFetch.textContent = data[1].author
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeTwo")
+    titleFetch.textContent = data[1].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("thumbnailThree")
+    thumbnailFetch.src = data[2].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoThree")
     titleFetch.textContent = data[2].title
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameThree();
-
-function setPicThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const imageFetch = document.getElementById("creatorPicThree")
-    imageFetch.src = "https://smileschool-api.s3.amazonaws.com/profile_3.jpg"
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setPicThree();
-
-function setCreatorThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+    imageFetch.src = data[2].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("creatorThree")
     titleFetch.textContent = data[2].author
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorThree();
-
-function setStarsThree() {
-  // TODO
-}
-setStarsThree()
-
-function setTimeThree() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeThree")
-    timeFetch.textContent = data[2].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeThree();
-
-// Fourth Video
-function setThumbnailFour() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const thumbnailFetch = document.getElementById("thumbnailFour")
-    thumbnailFetch.src = "https://smileschool-api.s3.amazonaws.com/thumbnail_4.jpg"
-  })
-  .catch(error => {
+  },
+  error: function(error) {
     console.error(error)
-  })
-}
-setThumbnailFour();
-
-function setVideoNameFour() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+});
+// Ajax request for third video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeThree")
+    titleFetch.textContent = data[2].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fourth video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("thumbnailFour")
+    thumbnailFetch.src = data[3].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fourth video name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoFour")
     titleFetch.textContent = data[3].title
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameFour();
-
-function setCreatorFour() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fourth video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const imageFetch = document.getElementById("creatorPicFour")
+    imageFetch.src = data[3].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fourth video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("creatorFour")
     titleFetch.textContent = data[3].author
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorFour();
-
-function setStarsFour() {
-  // TODO
-}
-setStarsFour();
-
-function setTimeFour() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeFour")
-    timeFetch.textContent = data[3].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeFour();
-
-// Fifth Video
-function setVideoNameFive() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fourth video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeFour")
+    titleFetch.textContent = data[3].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fifth video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("thumbnailFive")
+    thumbnailFetch.src = data[4].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fifth video name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoFive")
     titleFetch.textContent = data[4].title
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameFive();
-
-function setCreatorFive() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fifth video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const imageFetch = document.getElementById("creatorPicFive")
+    imageFetch.src = data[4].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fifth video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("creatorFive")
     titleFetch.textContent = data[4].author
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorFive();
-
-function setStarsFive() {
-  // TODO
-}
-setStarsFive();
-
-function setTimeFive() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeFive")
-    timeFetch.textContent = data[4].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeFive();
-
-// Sixth Video
-function setVideoNameSix() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for fifth video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeFive")
+    titleFetch.textContent = data[4].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for sixth video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("thumbnailSix")
+    thumbnailFetch.src = data[5].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for sixth video name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("videoSix")
     titleFetch.textContent = data[5].title
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setVideoNameSix();
-
-function setCreatorSix() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for sixth video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const imageFetch = document.getElementById("creatorPicSix")
+    imageFetch.src = data[5].author_pic_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for sixth video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
     const titleFetch = document.getElementById("creatorSix")
     titleFetch.textContent = data[5].author
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setCreatorSix();
-
-function setStarsSix() {
-  // TODO
-}
-setStarsSix();
-
-function setTimeSix() {
-  fetch("https://smileschool-api.hbtn.info/popular-tutorials")
-  .then(response => response.json())
-  .then(data => {
-    const timeFetch = document.getElementById("timeSix")
-    timeFetch.textContent = data[5].duration
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-setTimeSix();
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Ajax request for sixth video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const titleFetch = document.getElementById("timeSix")
+    titleFetch.textContent = data[5].duration
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+// Latest videos section
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("latestThumbOne")
+    thumbnailFetch.src = data[0].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("latestThumbTwo")
+    thumbnailFetch.src = data[1].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("latestThumbThree")
+    thumbnailFetch.src = data[2].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const thumbnailFetch = document.getElementById("latestThumbFour")
+    thumbnailFetch.src = data[3].thumb_url;
+  },
+  error: function(error) {
+    console.error(error)
+  },
+});
