@@ -5,7 +5,7 @@ $(document).ready(function () {
     url: "https://smileschool-api.hbtn.info/quotes",
     method: "GET",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       const ImageFetch = document.getElementById("quotePicOne");
       ImageFetch.src = data[0].pic_url;
     },
@@ -18,7 +18,7 @@ $(document).ready(function () {
     url: "https://smileschool-api.hbtn.info/quotes",
     method: "GET",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       const quoteFetch = document.getElementById("quoteOne");
       quoteFetch.textContent = data[0].text;
     },
@@ -31,7 +31,7 @@ $(document).ready(function () {
     url: "https://smileschool-api.hbtn.info/quotes",
     method: "GET",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       const quoteFetch = document.getElementById("nameOne");
       quoteFetch.textContent = data[0].name;
     },
@@ -44,7 +44,7 @@ $(document).ready(function () {
     url: "https://smileschool-api.hbtn.info/quotes",
     method: "GET",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       const quoteFetch = document.getElementById("titleOne");
       quoteFetch.textContent = data[0].title;
     },
@@ -72,7 +72,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("quoteTwo");
     quoteFetch.textContent = data[1].text;
   },
@@ -85,7 +85,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("nameTwo");
     quoteFetch.textContent = data[1].name;
   },
@@ -98,7 +98,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("titleTwo");
     quoteFetch.textContent = data[1].title;
   },
@@ -553,7 +553,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const ImageFetch = document.getElementById("pricingPicOne");
     ImageFetch.src = data[0].pic_url;
   },
@@ -566,7 +566,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const ImageFetch = document.getElementById("pricingPicTwo");
     ImageFetch.src = data[1].pic_url;
   },
@@ -579,7 +579,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("pricingNameOne");
     quoteFetch.textContent = data[0].name;
   },
@@ -592,7 +592,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("pricingNameTwo");
     quoteFetch.textContent = data[1].name;
   },
@@ -605,7 +605,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("pricingTitleOne");
     quoteFetch.textContent = data[0].title;
   },
@@ -618,7 +618,7 @@ $.ajax({
   url: "https://smileschool-api.hbtn.info/quotes",
   method: "GET",
   dataType: "json",
-  success: function (data) {
+  success: function(data) {
     const quoteFetch = document.getElementById("pricingTitleTwo");
     quoteFetch.textContent = data[1].title;
   },
@@ -631,7 +631,7 @@ $.ajax({
     url: "https://smileschool-api.hbtn.info/quotes",
     method: "GET",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       const quoteFetch = document.getElementById("pricingQuoteOne");
       quoteFetch.textContent = data[0].text;
     },
@@ -644,7 +644,7 @@ $.ajax({
       url: "https://smileschool-api.hbtn.info/quotes",
       method: "GET",
       dataType: "json",
-      success: function (data) {
+      success: function(data) {
         const quoteFetch = document.getElementById("pricingQuoteTwo");
         quoteFetch.textContent = data[1].text;
       },
