@@ -78,4 +78,4 @@ Jhoan Zamora: [jzamora5](https://github.com/jzamora5)
 
 Zack Yuan: [zack6yuan](https://github.com/zack6yuan)
 
-Visit my site here: (https://zack6yuan.github.io/smiling-school-javascript)
+Visit my site here: (https://zack6yuan.github.io/atlas-smiling-school-javascript/homepage.html)
