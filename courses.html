@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>holberton-smiling</title>
+    <title>SmileSchool - Courses</title>
     <!-- Custom and Font Styles  -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="font-style.css" />
@@ -111,10 +111,7 @@
         <div class="container">
           <div class="row py-4">
             <div class="col-12 col-sm-12 col-lg-4 box1">
-              <span class="text-white font-weight-bold drop-down-title"
-                >KEYWORDS</span
-              >
-
+              <span class="text-white font-weight-bold drop-down-title" id="inputKeywords">KEYWORDS</span>
               <div class="input-group mb-sm-4">
                 <div class="input-group-prepend">
                   <span
@@ -127,8 +124,12 @@
                   aria-label="Default"
                   aria-describedby="inputGroup-sizing-default"
                   placeholder="Search by keywords"
+                  id="inputKeywords"
                 />
               </div>
+              <script>
+
+              </script>
             </div>
             <div class="col-12 col-sm-6 col-lg-4 box2">
               <span class="text-white font-weight-bold drop-down-title"
@@ -151,9 +152,9 @@
                   class="dropdown-menu mt-0"
                   aria-labelledby="dropdownMenuLink"
                 >
-                  <a class="dropdown-item" href="#">Novice</a>
-                  <a class="dropdown-item" href="#">Intermediate</a>
-                  <a class="dropdown-item" href="#">Expert</a>
+                  <a class="dropdown-item" href="#" id="noviceOption">Novice</a>
+                  <a class="dropdown-item" href="#" id="intermediateOption">Intermediate</a>
+                  <a class="dropdown-item" href="#" id="expertOption">Expert</a>
                 </div>
               </div>
             </div>
@@ -194,7 +195,10 @@
           </div>
           <div class="row">
             <div class="col-12 col-sm-4 col-lg-3 d-flex justify-content-center">
-              <div class="card">
+              <script>
+
+              </script>
+              <div class="card card-one" id="courseOne">
                 <img
                   src="images/thumbnail_4.jpg"
                   class="card-img-top"

@@ -651,4 +651,34 @@ $(document).ready(function () {
       console.error(error);
     },
   });
+  // Topics dropdown
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/popular-tutorials",
+    method: "GET",
+    dataType: "json",
+    success: function(data) {
+      const topicSelect = document.getElementById("noviceOption")
+      topicSelect.textContent = data[1].topic
+    },
+    error: function(error) {
+      console.error(error);
+    }
+  })
+  $.ajax({
+    url: "https://smileschool-api.hbtn.info/courses",
+    method: "GET",
+    dataType: "json",
+    success: function(data) {
+      const topicSelect = document.getElementById("intermediateOption")
+      topicSelect.textContent = data.topics[2]
+    }
+  })
 });
+
+function showHideCourseOne() {
+  const firstCourse = document.getElementById("courseOne");
+  if (firstCourse) {
+    firstCourse.style.display = 'none'
+  }
+}
+showHideCourseOne();
