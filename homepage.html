@@ -34,9 +34,11 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- JavaScript -->
     <script src="scripts.js"></script>
+    <script src="slick.js"></script>
 
     <link
       rel="stylesheet"
@@ -1196,7 +1198,7 @@
                               width="15px"
                             />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeOne"></span>
                         </div>
                       </div>
                     </div>
@@ -1219,20 +1221,19 @@
                         />
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title font-weight-bold">Sad Smile</h5>
+                        <h5 class="card-title font-weight-bold" id="latestVideoTwo"></h5>
                         <p class="card-text text-muted">
                           Lorem ipsum dolor sit amet, consect adipiscing elit,
                           sed do eiusmod.
                         </p>
                         <div class="creator d-flex align-items-center">
                           <img
-                            src="images/profile_1.jpg"
-                            alt="Creator of
-                            Video"
+                            id="latestCreatorPicTwo"
+                            alt="Creator ofVideo"
                             width="30px"
                             class="rounded-circle"
                           />
-                          <h6 class="pl-3 m-0 main-color">Phillip Massey</h6>
+                          <h6 class="pl-3 m-0 main-color" id="latestCreatorNameTwo"></h6>
                         </div>
                         <div class="info pt-3 d-flex justify-content-between">
                           <div class="rating">
@@ -1257,12 +1258,12 @@
                               width="15px"
                             />
                             <img
-                              src="images/star_off.png"
+                              src="images/star_on.png"
                               alt="star on"
                               width="15px"
                             />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeTwo"></span>
                         </div>
                       </div>
                     </div>
@@ -1292,26 +1293,16 @@
                         </p>
                         <div class="creator d-flex align-items-center">
                           <img
-                            src="images/profile_1.jpg"
+                            id="latestCreatorPicThree"
                             alt="Creator of
                             Video"
                             width="30px"
                             class="rounded-circle"
                           />
-                          <h6 class="pl-3 m-0 main-color">Phillip Massey</h6>
+                          <h6 class="pl-3 m-0 main-color" id="latestCreatorNameThree"></h6>
                         </div>
                         <div class="info pt-3 d-flex justify-content-between">
                           <div class="rating">
-                            <img
-                              src="images/star_on.png"
-                              alt="star on"
-                              width="15px"
-                            />
-                            <img
-                              src="images/star_on.png"
-                              alt="star on"
-                              width="15px"
-                            />
                             <img
                               src="images/star_on.png"
                               alt="star on"
@@ -1327,8 +1318,18 @@
                               alt="star on"
                               width="15px"
                             />
+                            <img
+                              src="images/star_off.png"
+                              alt="star on"
+                              width="15px"
+                            />
+                            <img
+                              src="images/star_off.png"
+                              alt="star on"
+                              width="15px"
+                            />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeThree"></span>
                         </div>
                       </div>
                     </div>
@@ -1392,7 +1393,7 @@
                               width="15px"
                             />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeFour"></span>
                         </div>
                       </div>
                     </div>
@@ -1464,7 +1465,7 @@
                               width="15px"
                             />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeFive"></span>
                         </div>
                       </div>
                     </div>
@@ -1530,7 +1531,7 @@
                               width="15px"
                             />
                           </div>
-                          <span class="main-color">8 min</span>
+                          <span class="main-color" id="latestTimeSix"></span>
                         </div>
                       </div>
                     </div>

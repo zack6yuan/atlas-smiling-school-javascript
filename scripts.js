@@ -674,11 +674,152 @@ $(document).ready(function () {
     }
   })
 });
-
-function showHideCourseOne() {
-  const firstCourse = document.getElementById("courseOne");
-  if (firstCourse) {
-    firstCourse.style.display = 'none'
+// Ajax request for second video thumbnail
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const thumbnailFetch = document.getElementById("thumbnailTwo")
+    thumbnailFetch.src = data[1].thumb_url;
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video title
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const titleFetch = document.getElementById("latestVideoTwo")
+    titleFetch.textContent = data[1].title
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const imageFetch = document.getElementById("latestCreatorPicTwo")
+    imageFetch.src = data[1].author_pic_url;
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const titleFetch = document.getElementById("creatorTwo")
+    titleFetch.textContent = data[1].author
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const titleFetch = document.getElementById("timeTwo")
+    titleFetch.textContent = data[1].duration
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video creator pfp
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const imageFetch = document.getElementById("latestCreatorPicThree")
+    imageFetch.src = data[2].author_pic_url;
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for second video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const titleFetch = document.getElementById("latestCreatorNameTwo")
+    titleFetch.textContent = data[1].author
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Ajax request for third video creator name
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/popular-tutorials",
+  method: "GET",
+  dataType: "json",
+  success: function (data) {
+    const titleFetch = document.getElementById("latestCreatorNameThree")
+    titleFetch.textContent = data[2].author
+  },
+  error: function (error) {
+    console.error(error)
+  },
+});
+// Set first video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeOne")
+    timeFetch.textContent = data[0].duration
   }
-}
-showHideCourseOne();
+})
+// Set second video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeTwo")
+    timeFetch.textContent = data[1].duration
+  }
+})
+// Set third video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeThree")
+    timeFetch.textContent = data[2].duration
+  }
+})
+// Set fourth video time
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeFour")
+    timeFetch.textContent = data[3].duration
+  }
+})
+
+$("#carouselExampleControls2").slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+});
