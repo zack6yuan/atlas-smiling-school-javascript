@@ -884,6 +884,24 @@ $.ajax({
   }
 })
 $.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeFive")
+    timeFetch.textContent = data[0].duration
+  }
+})
+$.ajax({
+  url: "https://smileschool-api.hbtn.info/latest-videos",
+  method: "GET",
+  dataType: "json",
+  success: function(data) {
+    const timeFetch = document.getElementById("latestTimeSix")
+    timeFetch.textContent = data[1].duration
+  }
+})
+$.ajax({
   url: "https://smileschool-api.hbtn.info/popular-tutorials",
   method: "GET",
   dataType: "json",
@@ -1405,6 +1423,20 @@ $.ajax({
     timeFetch.textContent = data.courses[10].duration
   }
 })
+
+function showHideLoader() {
+  const getCarousel = document.getElementById("carouselExampleControls")
+  const getLoader = document.getElementsByClassName("loader")
+  if (getLoader) {
+    if (!getCarousel) {
+      getLoader.style.display = 'none';
+    } else {
+      getLoader.style.display = 'block';
+    }
+  }
+}
+showHideLoader();
+
 $.ajax({
   url: "https://smileschool-api.hbtn.info/courses",
   method: "GET",
